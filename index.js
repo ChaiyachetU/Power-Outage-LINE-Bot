@@ -12,7 +12,7 @@ const LINE_MESSAGING_API = "https://api.line.me/v2/bot/message";
 const LINE_HEADER = {
   "Content-Type": "application/json",
   Authorization:
-    "Bearer bbJqq+KwNZOiPo4hcfYFZMxpra0nXZy2HR0nAb8wCUWJFfXblzOga5cRYM8Xu8J0tk4sxu5i1MIKnUjXazzwY9W6sikbE0tRQJv3QvofEST02+gN612lmSm3cAkDIf/QQSAhY7Xw6xKBUJZ32edW0QdB04t89/1O/w1cDnyilFU==",
+    "Bearer YOUR-CHANNEL-ACCESS-TOKEN",
 };
 
 // Set today time
@@ -217,7 +217,7 @@ const pushMessage = (message) => {
     url: `${LINE_MESSAGING_API}/push`,
     headers: LINE_HEADER,
     data: JSON.stringify({
-      to: "U71cfb0b70391af3376b16bfac0197ce0",
+      to: USER_ID OR GROUP_ID,
       messages: [
         {
           type: "flex",
