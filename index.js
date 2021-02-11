@@ -34,7 +34,7 @@ const dateToTime = (dateInput) => {
 
 // Scraper data from url
 const scraper = async () => {
-  const response = await axios(
+  const response = await axios.get(
     "https://www.pea.co.th/WebApplications/Outage/New/Index.aspx"
   );
 
