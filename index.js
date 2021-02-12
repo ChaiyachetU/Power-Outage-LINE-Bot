@@ -393,7 +393,7 @@ exports.getPeaOutage = functions
       // Set data to cloud firestore
       data.forEach(async (item) => {
         await db
-          .collection("peaoutage")
+          .collection("{Your Collection}")
           .doc(`${item.id}`)
           .set(item, { merge: true });
       });
@@ -433,8 +433,6 @@ exports.replyPeaOutage = functions
             // Reply quick reply for user send location
             quickReply(replyToken);
           }
-
-          res.status(200).end();
         }
 
         // Check user send location
@@ -482,8 +480,6 @@ exports.replyPeaOutage = functions
 
           // Reply message to user
           replyMessage(carouselContents, replyToken);
-
-          res.status(200).send("Completed");
         }
       }
     } catch (err) {
